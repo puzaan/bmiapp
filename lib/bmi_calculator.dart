@@ -24,13 +24,13 @@ class BMICalculator {
 
   String bmiShortMessage(double bmiValue) {
     if (bmiValue < 18.5) {
-      return "UnderWeight BMI range\n 18.0 Kg/m2";
+      return "UnderWeight \nLess than 18.0 Kg/m2";
     } else if (bmiValue >= 18.5 && bmiValue <= 24.9) {
-      return "Normal BMI range\n18.5-25 Kg/m2";
+      return "Normal \nBetween 18.5-25 Kg/m2";
     } else if (bmiValue >= 25.0 && bmiValue <= 29.9) {
-      return 'OverWeight\n25.0 - 29.0 Kg/m2';
+      return 'OverWeight\nBetween 25.0 - 29.0 Kg/m2';
     } else {
-      return ('Obese\n30 Kg/m2');
+      return ('Obese\nMore than 30 Kg/m2');
     }
   }
 }
