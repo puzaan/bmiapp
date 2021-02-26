@@ -10,7 +10,7 @@ class BMIRoundBttn extends StatelessWidget {
       elevation: 0.0,
       child: Icon(icon),
       onPressed: onPress,
-      constraints: BoxConstraints.tightFor(width: 55, height: 55),
+      constraints: BoxConstraints.tightFor(width: 45, height: 45),
       shape: CircleBorder(),
       fillColor: Color(0xFF4C4F5E),
     );

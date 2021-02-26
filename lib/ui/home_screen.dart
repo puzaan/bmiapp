@@ -24,10 +24,10 @@ class _HomePageState extends State<HomePage> {
   int height = 180;
   int weight = 60;
   int age = 20;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
         centerTitle: true,
         title: Text('BMI Calculator'),
@@ -96,25 +96,27 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ],
                   ),
-                  SliderTheme(
-                    data: SliderTheme.of(context).copyWith(
-                        activeTrackColor: Colors.white,
-                        inactiveTrackColor: Color(0xFFD8E98),
-                        thumbColor: Color(0xFFEB1555),
-                        overlappingShapeStrokeColor: Color(0x29EB1555),
-                        thumbShape:
-                            RoundSliderThumbShape(enabledThumbRadius: 15.0),
-                        overlayShape:
-                            RoundSliderOverlayShape(overlayRadius: 30.0)),
-                    child: Slider(
-                      value: height.toDouble(),
-                      max: 220.0,
-                      min: 20.0,
-                      onChanged: (double newValue) {
-                        setState(() {
-                          height = newValue.toInt();
-                        });
-                      },
+                  Expanded(
+                    child: SliderTheme(
+                      data: SliderTheme.of(context).copyWith(
+                          activeTrackColor: Colors.white,
+                          inactiveTrackColor: Color(0xFFD8E98),
+                          thumbColor: Color(0xFFEB1555),
+                          overlappingShapeStrokeColor: Color(0x29EB1555),
+                          thumbShape:
+                              RoundSliderThumbShape(enabledThumbRadius: 15.0),
+                          overlayShape:
+                              RoundSliderOverlayShape(overlayRadius: 30.0)),
+                      child: Slider(
+                        value: height.toDouble(),
+                        max: 220.0,
+                        min: 20.0,
+                        onChanged: (double newValue) {
+                          setState(() {
+                            height = newValue.toInt();
+                          });
+                        },
+                      ),
                     ),
                   )
                 ],

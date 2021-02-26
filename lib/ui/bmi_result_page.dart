@@ -56,7 +56,7 @@ class ResultUI extends StatelessWidget {
           BottomContainer(
             title: "Re-Calculate",
             onPress: () {
-              Navigator.push(
+              Navigator.pushReplacement(
                   context, MaterialPageRoute(builder: (context) => HomePage()));
             },
           )
